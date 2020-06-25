@@ -1,0 +1,380 @@
+---
+metadata:
+  title: |
+    DSA SpLD Recommendations 
+  short title: |
+    DSA SpLD
+  description: |
+    DSA SpLD Recommendations generator
+  authors:
+    - name: Adam
+      organization: AbiltyNet
+  revision_date: 2020-06-05
+---
+initial: true
+code: |
+  if not user_logged_in():
+    kick_out_user
+---
+event: kick_out_user
+question: |
+  I am sorry, but you need to log in if you want to use this.
+buttons:
+  - Log in: signin
+  - Exit: exit
+---
+mandatory: True
+question: |
+  Reading and Research
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B21_Imp
+    input type: area
+    rows: 10
+  - Text-to-speech: B21_tts
+    datatype: yesno
+  - Select: B21_tts_type
+    show if: B21_tts
+    choices:
+      - TextHelp Read & Write
+      - ClaroRead Plus UK Version
+      - ClaroRead Pro
+  - Mind mapping: B21_mm
+    datatype: yesno
+  - Select: B21_mm_type
+    show if: B21_mm
+    choices:
+      - MindView AT Suite
+      - Mindjet Mindview
+      - Inspiration
+  - MS Learning Tools/Immersive reader: B21_leatoo
+    datatype: yesno
+    help: |
+        In-built reading tools - line focus, page tinting, letter spacing and TTS 
+  - Microsoft OneNote (Electronic notes): B21_oneno
+    datatype: yesno
+  - Dictionary/Word finding: B21_dict
+    datatype: yesno
+    help: |
+        Spellementary
+  - Printer/Scanner: B21_prn
+    datatype: yesno
+  - Select: B21_prn_type
+    show if: B21_prn
+    choices:
+      - Canon Pixma MG5750 Printer/Scanner
+      - Canon Pixma MX725
+  - Book scanner: B21_bkscn
+    datatype: yesno 
+  - Printing Consumables fund: B21_pcon
+    datatype: yesno
+  - Uni printing fund: B21_phofn
+    datatype: yesno
+  - Study Skills Support (SpLD): B21_ss
+    datatype: yesno
+  - Support not listed: B21_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B21_plus
+    show if: B21_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Writing and Reviewing
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B22_Imp
+    input type: area
+    rows: 10
+  - Speech-to-Text: B22_dict
+    datatype: yesno
+  - Text-to-speech (proofing): B22_tts
+    datatype: yesno 
+  - Select: B22_tts_type
+    show if: B22_tts
+    choices:
+      - TextHelp Read & Write
+      - ClaroRead Plus UK Version
+      - ClaroRead Pro
+  - Immersive reader (proofing): B22_immre
+    datatype: yesno 
+  - Spelling correction: B22_spel
+    datatype: yesno
+  - Grammar correction: B22_gram
+    datatype: yesno
+  - Mind mapping: B22_mm
+    datatype: yesno
+  - Select: B22_mm_type
+    show if: B22_mm
+    choices:
+      - MindView AT Suite
+      - Mindjet Mindview
+      - Inspiration
+  - Wordbank: B22_wbnk
+    datatype: yesno 
+  - Referencing: B22_ref
+    datatype: yesno 
+  - Manchester University Phrasebank: B22_manc
+    datatype: yesno 
+  - Touch typing tutorial: B22_tytut
+    datatype: yesno
+  - Select: B22_tytut_type
+    show if: B22_tytut
+    choices:
+      - Azabat Advanced Typing Tutor
+      - Azabat Collection (Beginner & Advanced)
+      - Ten Thumbs Typing Tutor
+  - Study Skills Support (SpLD): B22_ss
+    datatype: yesno 
+  - Support not listed: B22_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B22_plus
+    show if: B22_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Notetaking in lectures and seminars
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B23_Imp
+    input type: area
+    rows: 10
+  - Digital Voice Recorder: B23_dvr
+    datatype: yesno
+  - Note taking software: B23_ntk
+    datatype: yesno
+  - Select: B23_ntk_type
+    show if: B23_ntk
+    choices:
+      - Sonocent Audio Notetaker
+      - NTEhub
+      - Glean by Sonocent
+  - External mic/bundle: B23_mic
+    datatype: yesno 
+  - Study Skills Support (SpLD): B23_ss
+    datatype: yesno 
+  - Support not listed: B23_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B23_plus
+    show if: B23_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Time management and organisation
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B24_Imp
+    input type: area
+    rows: 10
+  - Personal Information Management: B24_pim
+    datatype: yesno
+  - Notetaking software/app: B24_keep
+    datatype: yesno
+  - Notetaking notebook: B24_oneno
+    datatype: yesno
+  - Electronic tasklist: B24_todo
+    datatype: yesno
+  - Mind mapping: B24_mm
+    datatype: yesno
+  - Select: B24_mm_type
+    show if: B24_mm
+    choices:
+      - MindView AT Suite
+      - Mindjet Mindview
+      - Inspiration
+  - Wall planner: B24_walp
+    datatype: yesno
+  - Consider deadline extensions: B24_ded
+    datatype: yesno
+  - Study Skills Support (SpLD): B24_ss
+    datatype: yesno 
+  - Support not listed: B24_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B24_plus
+    show if: B24_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Access to Technology
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B25_Imp
+    input type: area
+    rows: 10
+  - Course length: cor_len
+    datatype: number
+  - Laptop PC: B25_lap
+    datatype: yesno
+  - Desktop PC: B25_dsk
+    datatype: yesno
+  - AT Training: B25_attra
+    datatype: yesno
+  - Select: at_hrs
+    datatype: number
+    required: False
+  - AT Portal: B25_atptl
+    datatype: yesno
+  - Select: B25_atptl_type
+    show if: B25_atptl
+    choices:
+      - Learning Labs
+      - Succeed 2.0 FindMyFlow
+      - Aspire
+      - iView Learning
+  - Warranty, insurance and maintenance: B25_war
+    datatype: yesno 
+  - Support not listed: B25_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B25_plus
+    show if: B25_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Practical Sessions
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B26_Imp
+    input type: area
+    rows: 10
+  - Portable spellchecker: B26_spl
+    datatype: yesno 
+  - Support not listed: B26_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B26_plus
+    show if: B26_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Exams and Timed Assessments
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B27_Imp
+    input type: area
+    rows: 10
+  - Discuss additional time: B27_ti
+    datatype: yesno 
+  - Discuss breaks: B27_brk
+    datatype: yesno 
+  - Discuss Reader: B27_rdr
+    datatype: yesno 
+  - Discuss Scribe: B27_scr
+    datatype: yesno
+  - Discuss use of PC: B27_pc
+    datatype: yesno
+  - Study Skills (SpLD): B27_ss
+    datatype: yesno 
+  - Support not listed: B27_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B27_plus
+    show if: B27_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Social interaction and Communication
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B28_Imp
+    input type: area
+    rows: 10
+  - Present Pal: B28_ppal
+    datatype: yesno 
+  - MS Presenter Coach: B28_pcoa
+    datatype: yesno     
+  - Digital Voice Recorder: B28_dvr
+    datatype: yesno 
+  - Notetaking software: B28_not
+    datatype: yesno
+  - Printer (cue cards): B28_prn
+    datatype: yesno
+    help: |
+        You will need to have selected a printer in section B-2-1
+  - Consider reduced presentation sizes: B28_red
+    datatype: yesno
+  - Study Skills (SpLD): B28_ss
+    datatype: yesno 
+  - Support not listed: B28_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B28_plus
+    show if: B28_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Travel and Access to HE
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B29_Imp
+    input type: area
+    rows: 10
+  - Student receives PIP/DLA: PIP
+    datatype: yesno 
+  - Taxi transport: tra_tax
+    datatype: yesno
+  - Support not listed: B29_addit
+    datatype: yesno
+    help: |
+        This will list items at the bottom of the recommendations in this section - if you think an item needs to be added please let Adam know.
+  - Enter support: B29_plus
+    show if: B29_addit
+    input type: area
+    rows: 4
+---
+mandatory: True
+question: |
+  Additional Information
+subquestion: |
+  Key Impacts and Recommendations
+fields:
+  - Key Impact Notes: B210_Imp
+    input type: area
+    rows: 10
+---
+mandatory: True
+question: |
+  Here is your document.
+attachment:
+  name: NAR Recommendations
+  filename: NAR_Pt2
+  docx template file: XXR_P2_SpLD.docx
+  valid formats:
+    - docx
+allow emailing: False
