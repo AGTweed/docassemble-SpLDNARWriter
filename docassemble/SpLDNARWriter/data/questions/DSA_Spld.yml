@@ -32,6 +32,7 @@ fields:
   - Key Impact Notes: B21_Imp
     input type: area
     rows: 10
+    required: False
   - Text-to-speech: B21_tts
     datatype: yesno
   - Select: B21_tts_type
@@ -91,6 +92,7 @@ fields:
   - Key Impact Notes: B22_Imp
     input type: area
     rows: 10
+    required: False
   - Speech-to-Text: B22_dict
     datatype: yesno
   - Text-to-speech (proofing): B22_tts
@@ -149,6 +151,7 @@ fields:
   - Key Impact Notes: B23_Imp
     input type: area
     rows: 10
+    required: False
   - Digital Voice Recorder: B23_dvr
     datatype: yesno
   - Note taking software: B23_ntk
@@ -181,6 +184,7 @@ fields:
   - Key Impact Notes: B24_Imp
     input type: area
     rows: 10
+    required: False
   - Personal Information Management: B24_pim
     datatype: yesno
   - Notetaking software/app: B24_keep
@@ -221,6 +225,7 @@ fields:
   - Key Impact Notes: B25_Imp
     input type: area
     rows: 10
+    required: False
   - Course length: cor_len
     datatype: number
   - Laptop PC: B25_lap
@@ -261,6 +266,7 @@ fields:
   - Key Impact Notes: B26_Imp
     input type: area
     rows: 10
+    required: False
   - Portable spellchecker: B26_spl
     datatype: yesno 
   - Support not listed: B26_addit
@@ -281,6 +287,7 @@ fields:
   - Key Impact Notes: B27_Imp
     input type: area
     rows: 10
+    required: False
   - Discuss additional time: B27_ti
     datatype: yesno 
   - Discuss breaks: B27_brk
@@ -311,6 +318,7 @@ fields:
   - Key Impact Notes: B28_Imp
     input type: area
     rows: 10
+    required: False
   - Present Pal: B28_ppal
     datatype: yesno 
   - MS Presenter Coach: B28_pcoa
@@ -345,6 +353,7 @@ fields:
   - Key Impact Notes: B29_Imp
     input type: area
     rows: 10
+    required: False
   - Student receives PIP/DLA: PIP
     datatype: yesno 
   - Taxi transport: tra_tax
@@ -367,6 +376,7 @@ fields:
   - Key Impact Notes: B210_Imp
     input type: area
     rows: 10
+    required: False
 ---
 mandatory: True
 question: |
