@@ -10,6 +10,10 @@ metadata:
     - name: Adam
       organization: AbiltyNet
   revision_date: 2020-06-05
+  required privileges:
+   - admin
+   - developer
+   - advocate
 ---
 initial: true
 code: |
@@ -235,7 +239,9 @@ fields:
   - AT Training: B25_attra
     datatype: yesno
   - Select: at_hrs
+    show if: B25_attra
     datatype: number
+    min: 0
     required: False
   - AT Portal: B25_atptl
     datatype: yesno
