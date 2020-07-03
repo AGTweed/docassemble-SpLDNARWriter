@@ -40,6 +40,8 @@ fields:
     required: False
   - Text-to-speech: B21_tts
     datatype: yesno
+  - Speech-to-text: B21_stt
+    datatype: yesno
   - Select: B21_tts_type
     show if: B21_tts
     choices:
@@ -98,7 +100,7 @@ fields:
     input type: area
     rows: 10
     required: False
-  - Speech-to-Text: B22_dict
+  - Speech-to-Text: B22_stt
     datatype: yesno
   - Text-to-speech (proofing): B22_tts
     datatype: yesno 
