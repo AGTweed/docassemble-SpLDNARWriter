@@ -14,6 +14,7 @@ metadata:
    - admin
    - developer
    - advocate
+   - assessor
 ---
 initial: true
 code: |
@@ -239,9 +240,8 @@ fields:
   - AT Training: B25_attra
     datatype: yesno
   - Select: at_hrs
-    show if: B25_attra
-    datatype: number
-    min: 0
+    datatype: integer
+    default: 0
     required: False
   - AT Portal: B25_atptl
     datatype: yesno
