@@ -43,7 +43,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
     return out
 
 setup(name='docassemble.SpLDNARWriter',
-      version='0.0.5',
+      version='0.0.6',
       description=('DSA SpLD NAR recommendations'),
       long_description='SpLD NAR writer',
       long_description_content_type='text/markdown',
